@@ -34,3 +34,4 @@ let newDate = new Date();
 // console.log(newDate.getDay());
 
 newDate.toLocaleString('default', { month: 'long' });
+console.log(newDate.toLocaleString('default', { month: 'long' }));
