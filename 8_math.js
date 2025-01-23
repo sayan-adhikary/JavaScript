@@ -14,8 +14,8 @@ const hundred = 1000000
 // console.log(hundred.toLocaleString('en-US'));
 
 // +++++++++++++++++++++++++++++++++++++++++ Math Object +++++++++++++++++++++++++++++++++++++++++
-console.log(Math.PI);
-console.log(Math.E);
+// console.log(Math.PI);
+// console.log(Math.E);
 console.log(Math.round(2.4));
 console.log(Math.ceil(2.4));
 console.log(Math.floor(2.4));
