@@ -15,4 +15,4 @@ function reverseArray(arr) {
 }
 
 // Usage
-// console.log(reverseArray([4,5,6,7,8]));
+console.log(reverseArray([4,5,6,7,8]));

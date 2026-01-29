@@ -11,4 +11,4 @@ function includes_value(arr, target) {
 }
 
 // Usage
-// console.log(includes_value([4,5,NaN,6], NaN));
+console.log(includes_value([4,5,NaN,6], NaN));
