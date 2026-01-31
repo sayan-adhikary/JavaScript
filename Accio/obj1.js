@@ -5,14 +5,22 @@
 // 3 repeated 2 times
 // 4 repeated 1 times
 const input = [1, 2, 3, 4, 1, 2, 3, 1, 1, 2, 4];
-function add(input) {
-  const frequency = new Object();
-  for (const key of input) {
-    let val = frequency[key];
-    if (val === undefined) {
-      val = 0;
-    }
-    frequency[key] = val + 1;
+// function add(input) {
+//   const frequency = new Object();
+//   for (const key of input) {
+//     let val = frequency[key];
+//     if (val === undefined) {
+//       val = 0;
+//     }
+//     frequency[key] = val + 1;
+//   }
+//   console.log(frequency);
+// }
+  for (let i = 0; i < input.length; i++) {
+    console.log(`${input[i]} repetaed ${values[i]} times`);
   }
-}
-add(input);
+//   for (let entry of entries) {
+//     console.log(`${entry[0]} repetaed ${entry[1]} times`);
+//   }
+// }
+// add(input);
