@@ -35,8 +35,18 @@ const MathFunction = {
         }
         return div;
     },
+    average() {
+        return (this.sum() / this.arr.length);
+    },
+    round() {                                       //
+        let rounderValues = [];
+        for (let ele of this.arr) {
+            let tempNumRem = parseInt(ele*10) % 10;
+            rounderValues.push(parseInt(ele) + (tempNumRem >= 5))
+        }
+        return rounderValues;
+    },
     cil() {
-
     },
     computeAllFunction() {              //did all sum mul sub div
         return {                        // return object
@@ -44,6 +54,8 @@ const MathFunction = {
             mul: this.mul(),
             sub: this.sub(),
             div: this.div(),
+            avg: this.average(),
+            round: this.round(),
         }
     }
 };
