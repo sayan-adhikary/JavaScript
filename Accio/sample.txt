@@ -1,0 +1,12 @@
+[8,7,9,11,15,20]
+
+1stlargestodd = 15
+2stlargestodd = 11
+3stlargestodd = 9
+
+op -> 9
+
+
+36. Rotate an Array by k Steps
+Input: [1,2,3,4,5], k = 2
+Output: [4,5,1,2,3]

@@ -8,5 +8,17 @@ const Person = {
         return this.job;
     }
 };
-console.log(Person.getDetails());
+// console.log(Person.getDetails());
 
+function arrToObject(arr){
+    const obj = {};
+    let idx = 0;
+    for(let ele of arr){
+        obj[idx] = ele;
+        idx++;
+    }
+    return obj;
+}
+
+let arr = [8,7,9,11,15,20];
+console.log(arrToObject(arr));
