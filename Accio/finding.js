@@ -36,7 +36,7 @@ const obj = {
         return xor1 ^ xor2
     },
     forth(){
-        return "using object and find this undefirnd"
+        return "using object and find this undefind"
     },
     all() {
         return {
