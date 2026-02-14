@@ -1,0 +1,3 @@
+Count Vowels and Consonants
+Input: "javascript"
+Output: Vowels: 3, Consonants: 7
