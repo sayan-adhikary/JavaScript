@@ -58,7 +58,7 @@ for(let i = 100;i>2;i/=2){
 }
 return count;
 }
-console.log(countSix());
+// console.log(countSix());
 
 function countSeven(){
     for(let i =0;i<100;i++){
@@ -68,4 +68,4 @@ function countSeven(){
     }
     return count;
 }
-// console.log(countSeven());
+console.log(countSeven());
