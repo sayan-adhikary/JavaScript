@@ -62,10 +62,10 @@ return count;
 
 function countSeven(){
     for(let i =0;i<100;i++){
-        for(let j = i;j>2;j++){
+        for(let j = i;j>2;j/=2){
             count++;
         }
     }
     return count;
 }
-console.log(countSeven());
+// console.log(countSeven());
