@@ -7,7 +7,7 @@ function countOne() {
     }
     return count;
 }
-// console.log(countOne());
+// console.log(countOne());    // 35
 
 function countTwo(){
     for(let i = 2; i <= 6; i++){
@@ -17,7 +17,7 @@ function countTwo(){
     }
     return count;
 }
-// console.log(countTwo());
+// console.log(countTwo());    // 25
 
 function countThree(){
     for(let i = 0; i < 10; i += 2){
@@ -27,7 +27,7 @@ function countThree(){
     }
     return count;
 }
-// console.log(countThree());
+// console.log(countThree());  // 30
 
 function countFour(){
     for(let i = 0; i < 5;i++){
@@ -37,7 +37,7 @@ function countFour(){
     }
     return count;
 }
-// console.log(countFour());
+// console.log(countFour());   // 10
 
 function countFive(){
     let n = 19;
@@ -48,7 +48,7 @@ function countFive(){
     }
     return count;
 }
-// console.log(countFive());
+// console.log(countFive());   // 171
 
 function countSix(){
 for(let i = 100;i>2;i/=2){
@@ -58,7 +58,7 @@ for(let i = 100;i>2;i/=2){
 }
 return count;
 }
-// console.log(countSix());
+// console.log(countSix());    // 199
 
 function countSeven(){
     for(let i =0;i<100;i++){
@@ -68,4 +68,4 @@ function countSeven(){
     }
     return count;
 }
-// console.log(countSeven());
+// console.log(countSeven());  // 468
