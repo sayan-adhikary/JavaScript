@@ -1,10 +1,6 @@
 //problem
 //you have a given a string, you have to return a new string where vowels are replaced by its successesive consonants.
-//a -> b
-//e -> f
-//i -> j
-//o -> p
-//u -> v
+//a -> b, e -> f, i -> j, o -> p, u -> v
 let string = "rahul";
 function replaceVowels(str) {
     let strArr = [];
