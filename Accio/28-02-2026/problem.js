@@ -26,7 +26,7 @@ for (let i = 0; i < a.length; i++) {
 }
 //colmnMax
 
-for (let col = 0; col < a[col].length; col++) {
+for (let col = 0; col < a[0].length; col++) {
     let colElement = -Infinity;
 
     for (let row = 0; row < a.length; row++) {
