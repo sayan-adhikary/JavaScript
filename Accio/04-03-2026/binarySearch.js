@@ -2,9 +2,9 @@ function binarySearch(arr, target) { //ascending order
     let start = 0, end = arr.length - 1;
     while (start <= end) {
         let mid = Math.floor((start + end) / 2);
-        if (arr[mid] === target){
-            return mid; 
-        } else if(arr[mid] > target){
+        if (arr[mid] === target) {
+            return mid;
+        } else if (arr[mid] > target) {
             end = mid - 1;
         } else {
             start = mid + 1;
@@ -17,32 +17,34 @@ function binarySearchDescending(arr, target) {
     let start = 0, end = arr.length - 1;
     while (start <= end) {
         let mid = Math.floor((start + end) / 2);
-        if (arr[mid] === target){
-            return mid; 
-        } else if(arr[mid] < target){
+        if (arr[mid] === target) {
+            return mid;
+        } else if (arr[mid] < target) {
             end = mid - 1;
         } else {
             start = mid + 1;
         }
     }
-    return -1; 
+    return -1;
 }
 
 function binaryySearchFirstOccurrence(arr, target) {
     let start = 0, end = arr.length - 1;
-    let result = -1;    
+    let result = -1;
+
     while (start <= end) {
         let mid = Math.floor((start + end) / 2);
-        if (arr[mid] === target){
+
+        if (arr[mid] === target) {
             result = mid;
             end = mid - 1; // Continue searching for the first occurrence
-        } else if(arr[mid] < target){
-            end = mid - 1;
-        } else {
+        } else if (arr[mid] < target) {
             start = mid + 1;
+        } else {
+            end = mid - 1;
         }
     }
-    return result; 
+    return result;
 }
 
 function binarySearchLastOccurrence(arr, target) {
@@ -51,26 +53,27 @@ function binarySearchLastOccurrence(arr, target) {
 
     while (start <= end) {
         let mid = Math.floor((start + end) / 2);
-        if (arr[mid] === target){
+
+        if (arr[mid] === target) {
             result = mid;
             start = mid + 1; // Continue searching for the last occurrence
-        } else if(arr[mid] < target){
-            end = mid - 1;
-        } else {
+        } else if (arr[mid] < target) {
             start = mid + 1;
+        } else {
+            end = mid - 1;
         }
     }
-    return result; 
+    return result;
 }
 
 function targetCountUsingBinarySearch(arr, target) {
-    let firstOccurrence = binaryySearchFirstOccurrence(arr, target);   
+    let firstOccurrence = binaryySearchFirstOccurrence(arr, target);
     let lastOccurrence = binarySearchLastOccurrence(arr, target);
-    
+
     if (firstOccurrence === -1) {
         return 0;
     }
-    
+
     return lastOccurrence - firstOccurrence + 1;
 }
 

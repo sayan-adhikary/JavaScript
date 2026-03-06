@@ -19,6 +19,16 @@ function floorVal(arr, target) {
         if (arr[mid] === target) {
             return arr[mid];
         }
-
+        else if (arr[mid] < target) {
+            result = arr[mid];
+            start = mid + 1;
+        }
+        else {
+            end = mid - 1;
+        }
+    }
     return result;
 }
+let arr = [3,6,7,9,15];
+console.log(floorVal(arr, 15)); // 15
+console.log(floorVal(arr, 18)); // 15

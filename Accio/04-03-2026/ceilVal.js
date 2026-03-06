@@ -1,11 +1,11 @@
 //print the ceil value of a number
-//[3,6,7,9,15]
-//(val <= target) return val
-//floor(15) = 15
-//floor(18) = -1
-//floor(14) = 15
-//floor(3) = 3
-//floor(2) = 3
+// [3,6,7,9,15]
+// (val >= target) return val
+// ceil(15) = 15
+// ceil(18) = -1
+// ceil(14) = 15
+// ceil(3) = 3
+// ceil(2) = 3
 
 function ceilVal(arr, target) {
     let start = 0, end = arr.length - 1;
@@ -26,3 +26,7 @@ function ceilVal(arr, target) {
     }
     return result;
 }
+
+let arr = [3,6,7,9,15];
+console.log(ceilVal(arr, 15)); // 15
+console.log(ceilVal(arr, 18)); // -1
