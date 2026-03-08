@@ -8,7 +8,7 @@ function boobleSort(arr) {
                 let temp = curr;
                 arr[j] = next;
                 arr[j + 1] = temp;
-            }
+            }   
         }
     return arr;
 }
