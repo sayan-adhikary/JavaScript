@@ -37,7 +37,8 @@ function selectionSort(arr) {
         arr[idx] = arr[minIdx];
         arr[minIdx] = temp;
     }
+    return arr;
 }
 
-let arr = [60, 42, 31, 7, 12, 15]
+let arr = [60, 42, 31, 7, 12, 15];
 console.log(selectionSort(arr));

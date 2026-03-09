@@ -55,7 +55,19 @@ function union(arr, arr1) {
     console.log(newArr);
 }
 // intersection(arr, arr1)
+function intersection1st(arr1, arr2) {
+    let st1 = new Set(arr1);
+    let st2 = new Set(arr2);
 
+    let ans = [];
+    for (let x of st1) {
+        if (st2.has(x)) {
+            ans.push(x);
+        }
+    }
+
+    return ans;
+}30
 let arr2 = [5, 7, 2, -3, 5];
 function prefixSum(arr) {
     let newArray = [];
