@@ -9,6 +9,7 @@ function insertionSort(arr){
         }
         arr[idx+1] = key;
     }
+    return arr;
 }
 
 let arr = [60, 42, 31, 7, 12, 15]
