@@ -1,43 +1,80 @@
 function quickSort(arr, start, end) {
-    if (start === end - 1) {
+    if (start >= end) {
         return;
     }
 
-    let position = partition(arr, start, end);
+    let position = partitionFront(arr, start, end);
     quickSort(arr, start, position - 1);
     quickSort(arr, position + 1, end);
 }
 
-function partition(arr, s, e) {
+function partitionFront(arr, s, e) {
     let count = 0;
     let elem = arr[s];
-    for (let i = 0; i <= e; i++) {
-        if (elem < arr[i]) {
+    for (let i = s; i <= e; i++) {
+        if (elem > arr[i]) {
             count++;
         }
     }
 
     let pos = s + count;
+
     let temp = arr[count];
     arr[count] = elem;
-    arr[0] = temp;
+    arr[s] = temp;
 
     let low = s, high = e;
     while (low < pos && high > pos) {
-        if (arr[s] >= elem && arr[e] <= elem) {
-            let t = arr[s];
-            arr[s] = arr[e];
-            arr[e] = t;
+        if (arr[low] >= elem && arr[high] <= elem) {
+            let t = arr[low];
+            arr[low] = arr[high];
+            arr[high] = t;
 
-            s++;
-            e--;
-        } else if (arr[s] > elem && arr[e] > elem) {
-            e--;
-        } else if (arr[s] < elem && arr[e] < elem) {
-            s++;
-        } else if (arr[s] < elem && arr[e] > elem) {
-            s++;
-            e--;
+            low++;
+            high--;
+        } else if (arr[low] > elem && arr[high] > elem) {
+            high--;
+        } else if (arr[low] < elem && arr[high] < elem) {
+            low++;
+        } else if (arr[low] < elem && arr[high] > elem) {
+            low++;
+            high--;
+        }
+    }
+    return pos;
+}
+
+function partitionBack(arr, s, e) {
+    let count = 0;
+    let elem = arr[e];
+    for (let i = s; i <= e; i++) {
+        if (elem > arr[i]) {
+            count++;
+        }
+    }
+
+    let pos = s + count;
+
+    let temp = arr[count];
+    arr[count] = elem;
+    arr[e] = temp;
+
+    let low = s, high = e;
+    while (low < pos && high > pos) {
+        if (arr[low] >= elem && arr[high] <= elem) {
+            let t = arr[low];
+            arr[low] = arr[high];
+            arr[high] = t;
+
+            low++;
+            high--;
+        } else if (arr[low] > elem && arr[high] > elem) {
+            high--;
+        } else if (arr[low] < elem && arr[high] < elem) {
+            low++;
+        } else if (arr[low] < elem && arr[high] > elem) {
+            low++;
+            high--;
         }
     }
     return pos;
