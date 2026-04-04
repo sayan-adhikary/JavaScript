@@ -13,7 +13,7 @@ function selectionSort(arr) {
             [arr[i], arr[minIdx]] = [arr[minIdx], arr[i]];
         }
     }
-    return arr; 
+    return arr;
 }
 
 let arr = [64, 25, 12, 22, 11];
