@@ -1,0 +1,29 @@
+/* task 1 */
+p {
+    background-color: brown;
+}
+
+/* task 2 */
+#main-heading{
+    background-color: aqua;
+}
+
+/* task 3 */
+.highlight{
+    background-color: #85f261;
+}
+
+/* task 4 */
+h3, span{
+    background-color: blue;
+}
+
+/* task 5 */
+ul > li{
+    background-color: coral;
+}
+
+/* task 6 */
+.container p{
+    background-color: aquamarine;
+}
