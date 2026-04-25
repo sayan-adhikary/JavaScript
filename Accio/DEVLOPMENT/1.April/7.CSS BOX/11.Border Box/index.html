@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Border-Box Practice</title>
+
+  <!-- Link your external CSS file here -->
+
+</head>
+<body>
+
+  <h1>Border-Box Practice</h1>
+
+  <!-- Problem 1: Same Box (Now Fixed) -->
+  <!-- Target #box1
+       width: 200px
+       padding: 20px
+       border: 5px solid black
+       box-sizing: border-box
+       background-color: lightgreen
+
+       Question:
+       Is total width still 200px? -->
+  <div id="box1">Box 1</div>
+
+
+  <!-- Problem 2: Increased Padding -->
+  <!-- Target #box2
+       width: 200px
+       padding: 40px
+       border: 5px solid red
+       box-sizing: border-box
+       background-color: lightcoral
+
+       Question:
+       Did total size increase or stay same? -->
+  <div id="box2">Box 2</div>
+
+
+  <!-- Problem 3: Multiple Boxes -->
+  <!-- Target #box3 and #box4
+
+       For both:
+       width: 200px
+       padding: 20px
+       border: 5px solid blue
+       box-sizing: border-box
+       display: inline-block
+
+       Question:
+       Do they fit in one row now? Why? -->
+  <div id="box3">Box 3</div>
+  <div id="box4">Box 4</div>
+
+
+  <!-- Problem 4: Container Fix -->
+  <!-- Target #container and .card
+
+       container width: 500px
+       background-color: lightgray
+
+       card:
+       width: 150px
+       padding: 20px
+       border: 5px solid black
+       box-sizing: border-box
+       display: inline-block
+
+       Question:
+       Do all cards fit now? Why? -->
+  <div id="container">
+    <div class="card">Card 1</div>
+    <div class="card">Card 2</div>
+    <div class="card">Card 3</div>
+  </div>
+
+</body>
+</html>

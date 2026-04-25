@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSS Units Practice</title>
+
+    <!-- Link your external CSS file here -->
+     <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>CSS Units Practice Assignment</h1>
+
+    <!-- Task 1: PX -->
+    <!-- Target #box1
+       width: 200px
+       height: 100px
+       background-color: blue -->
+    <div id="box1">Fixed size (px)</div>
+
+    <!-- Task 2: % (Parent relation) -->
+    <!-- Target #parent2 and #child2
+       parent width: 400px
+       child width: 50%
+       background-color: red -->
+    <div id="parent2">
+      <div id="child2">50% of parent</div>
+    </div>
+
+    <!-- Task 3: % Height Experiment -->
+    <!-- Target #parent3 and #child3
+       parent height: 200px
+       child height: 50%
+       background-color: blue
+       
+       Observe:
+       Does % height work? Try removing parent height -->
+    <div id="parent3">
+      <div id="child3">50% height</div>
+    </div>
+
+    <!-- Task 4: EM (font dependency) -->
+    <!-- Target #parent4 and #child4
+       parent font-size: 20px
+       child font-size: 2em
+       
+       Observe:
+       Change parent font-size and see effect -->
+    <div id="parent4">
+      Parent Text
+      <p id="child4">2em text</p>
+    </div>
+
+    <!-- Task 5: Nested EM (important) -->
+    <!-- Target #outer5, #inner5, #deep5
+       outer font-size: 20px
+       inner font-size: 2em
+       deep font-size: 2em
+       
+       Observe:
+       Compounding effect -->
+    <div id="outer5">
+      Outer
+      <div id="inner5">
+        Inner
+        <p id="deep5">Deep Text</p>
+      </div>
+    </div>
+
+    <!-- Task 6: REM -->
+    <!-- Target html and #text6
+       html font-size: 16px
+       text font-size: 2rem
+       
+       Observe:
+       Change html font-size -->
+    <p id="text6">2rem text</p>
+
+    <!-- Task 7: VW -->
+    <!-- Target #box7
+       width: 50vw
+       height: 100px
+       background-color: red
+       
+       Resize browser -->
+    <div id="box7">50vw</div>
+
+    <!-- Task 8: VH -->
+    <!-- Target #box8
+       height: 50vh
+       background-color: blue
+       
+       Resize browser -->
+    <div id="box8">50vh</div>
+
+    <!-- Task 9: Mixed Units -->
+    <!-- Target #box9
+       width: 60%
+       height: 100px
+       font-size: 1.5rem
+       padding: 2em
+       
+       Observe:
+       Different units together -->
+    <div id="box9">Mixed Units</div>
+
+    <!-- Task 10: Compare px vs % -->
+    <!-- Target #box10 and #box11
+       box10 width: 200px
+       box11 width: 50%
+       background-color: red/blue
+       
+       Resize screen and compare -->
+    <div id="box10">200px</div>
+    <div id="box11">50%</div>
+
+    <!-- Task 11: Full Screen Section -->
+    <!-- Target #box12
+       height: 100vh
+       background-color: red -->
+    <div id="box12">Full Screen Section</div>
+
+    <!-- Task 12: Centered Layout Feel -->
+    <!-- Target #box13
+       width: 50%
+       height: 100px
+       background-color: blue
+       
+       Observe spacing -->
+    <div id="box13">Centered feel</div>
+  </body>
+</html>

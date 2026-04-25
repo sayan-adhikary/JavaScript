@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Box Model Practice</title>
+
+    <!-- Link your external CSS file here -->
+     <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>Box Model Practice</h1>
+
+    <!-- Problem 1: Basic Box Model -->
+    <!-- Target #box1
+       width: 200px
+       padding: 20px
+       border: 5px solid black
+       margin: 30px
+       background-color: lightblue
+
+       Question:
+       What is the TOTAL width of the box?
+       (Hint: content + padding + border) -->
+    <div id="box1">Box 1</div>
+
+    <!-- Problem 2: Box-Sizing Comparison -->
+    <!-- Target #box2 and #box3
+
+       For #box2:
+       width: 200px
+       padding: 20px
+       border: 5px solid red
+       background-color: lightcoral
+
+       For #box3:
+       Same as above + box-sizing: border-box
+       background-color: lightgreen
+
+       Question:
+       Which box is bigger and why? -->
+    <div id="box2">Without border-box</div>
+    <div id="box3">With border-box</div>
+
+    <!-- Problem 3: Spacing Understanding -->
+    <!-- Target #outer and #inner
+
+       For #outer:
+       width: 300px
+       padding: 20px
+       border: 3px solid black
+       background-color: lightgray
+
+       For #inner:
+       width: 100px
+       padding: 10px
+       border: 2px solid blue
+       margin: 20px
+       background-color: lightblue
+
+       Question:
+       Identify:
+       - Which space is padding?
+       - Which space is margin? -->
+    <div id="outer">
+      Outer Box
+      <div id="inner">Inner Box</div>
+    </div>
+  </body>
+</html>

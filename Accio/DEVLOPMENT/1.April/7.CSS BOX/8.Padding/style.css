@@ -1,0 +1,52 @@
+#box1 {
+    padding: 20px;
+    background-color: #dd4d4d;
+}
+
+#box2 {
+    padding: 10px 20px;
+    background-color: aqua;
+}
+
+#box3 {
+    padding: 5px 20px 50px;
+    background-color: aquamarine;
+}
+
+#box4 {
+    padding: 10px 20px 30px 40px;
+    background-color: blueviolet;
+}
+
+#box5 {
+    padding-top: 30px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-left: 40px;
+    background-color: cadetblue;
+}
+
+#box6 {
+    background-color: blue;
+    width: 200px;
+    padding: 20px;
+    box-sizing: border-box;
+    Observe: width remains 200px;
+}
+
+#box7 {
+    width: 200px;
+    padding: 20px;
+    box-sizing: border-box;
+    Observe: width remains 200px;
+}
+
+#parent {
+    background-color: red;
+    padding: 10px;
+}
+
+#child {
+    padding: 20px;
+    background-color: yellow;
+}

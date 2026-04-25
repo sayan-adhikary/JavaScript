@@ -1,0 +1,49 @@
+* {
+    background-color: rebeccapurple;
+}
+
+#box1 {
+    width: 200px;
+       height: 100px;
+       background-color: blue;
+}
+
+#parent2 {
+    width: 400px;
+    background-color: red;
+}
+
+#child2 {
+    width: 50%;
+    background-color: rebeccapurple;
+}
+
+#parent3 {
+    height: 200px;
+    background-color: aqua;
+}
+
+#child3 {
+    height: 50%;
+    background-color: burlywood;
+}
+
+#parent4{
+    font-size: 20px;
+}
+
+#child {
+    font-size: 2em;
+}
+
+#outer5 {
+    font-size: 20px;
+}
+
+#inner5 {
+    font-size: 2em;
+}
+
+#deep5 {
+    font-size: 2em;
+}
