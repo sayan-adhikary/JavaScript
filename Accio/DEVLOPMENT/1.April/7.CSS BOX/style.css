@@ -1,11 +1,15 @@
-*{
-    background-color: black;
+* {
+    padding: 2px;
+    margin: 2px;
 }
+
 h1{
     color: aqua;
     border-radius: 100px;
     border: 10px solid white;
+
 }
-p{
-    color: aquamarine;
+
+div {
+    display: flex;
 }
