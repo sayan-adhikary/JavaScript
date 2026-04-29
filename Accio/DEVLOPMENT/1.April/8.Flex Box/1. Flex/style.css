@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+    background-color: aqua;
+    justify-content: center;
+    border: 3px solid black;
+    border-radius: 30px;
+}
+
+.bar {
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    color: rgb(195, 51, 51);
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.child-1st {
+    width: 70px;
+    height: 70px;
+}
