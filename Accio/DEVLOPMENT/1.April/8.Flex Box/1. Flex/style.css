@@ -1,13 +1,12 @@
 .container {
     display: flex;
     background-color: aqua;
-    justify-content: center;
     border: 3px solid black;
     border-radius: 30px;
 }
 
 .bar {
-    text-align: center;
+    justify-content: center;
     margin: 10px;
     padding: 10px;
     color: rgb(195, 51, 51);
