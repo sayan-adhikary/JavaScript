@@ -1,0 +1,111 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Body Styling */
+body {
+    background-color: #0d0d0d;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container */
+.container {
+    padding: 20px;
+}
+
+/* Product Card */
+.product-card {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 30px;
+    border-radius: 20px;
+    background-color: #000;
+    border: 2px solid #a100ff;
+    box-shadow: 0 0 20px rgba(161, 0, 255, 0.5);
+    max-width: 800px;
+}
+
+/* Image Section */
+.product-image {
+    background: #f2f2f2;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.product-image img {
+    width: 250px;
+    height: auto;
+    display: block;
+}
+
+/* Product Details */
+.product-details {
+    color: #fff;
+    max-width: 400px;
+}
+
+/* Title */
+.product-title {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+/* Price + Buttons */
+.product-price-buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.price {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Buttons */
+.btn {
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+/* Buy Now Button */
+.buy-btn {
+    background: linear-gradient(45deg, #a100ff, #ff00cc);
+    color: #fff;
+}
+
+.buy-btn:hover {
+    opacity: 0.85;
+}
+
+/* Add to Cart Button */
+.cart-btn {
+    background: transparent;
+    border: 1px solid #555;
+    color: #fff;
+}
+
+.cart-btn:hover {
+    border-color: #a100ff;
+    color: #a100ff;
+}
+
+/* Description */
+.product-description {
+    font-size: 14px;
+    color: #ccc;
+    line-height: 1.6;
+}
