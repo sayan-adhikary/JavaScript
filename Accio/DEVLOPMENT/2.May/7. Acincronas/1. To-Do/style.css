@@ -1,0 +1,25 @@
+*{
+    background-color: black;
+    margin: 0px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.holder {
+    color: aliceblue;
+}
+
+input {
+    width: 50%;
+    background-color: antiquewhite;
+    border-radius: 10px;
+}
+
+button {
+    background-color: aqua;
+    width: 25%;
+    margin-left: 15%;
+}
