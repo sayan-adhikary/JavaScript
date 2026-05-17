@@ -1,0 +1,17 @@
+* {
+    background-color: black;
+    margin: 10px;
+    padding: 20px;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    background-color: aqua;
+}
+
+div > div {
+    gap: 10px;
+    height: 100px;
+    width: 100px;
+}
