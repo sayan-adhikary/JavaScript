@@ -16,5 +16,7 @@ btn.addEventListener('click', ()=>{
 })
 
 dlt.addEventListener('click',(event)=>{
-    if(event.match === b)
+    if(event.match === b){
+        return;
+    }
 })
