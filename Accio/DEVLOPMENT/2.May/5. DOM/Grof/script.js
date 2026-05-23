@@ -2,7 +2,7 @@ let btn = document.createElement("button");
 btn.textContent = "Total Price";
 
 let body = document.querySelector("body");
-body.insertBefore(btn, body.children[1]);
+body.appendChild(btn);
 let end = 0;
 btn.addEventListener('click', () => {
     if (end == 1) {
@@ -10,7 +10,7 @@ btn.addEventListener('click', () => {
     }
     end = 1;
     let sum = 0;
-    let price = document.querySelectorAll(".price");
+    let price = document.querySelectorAll(".prices");
 
     for (let i = 0; i < price.length; i++) {
         let temp = price[i].textContent;
