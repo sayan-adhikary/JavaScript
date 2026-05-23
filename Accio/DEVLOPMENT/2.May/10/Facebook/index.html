@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook-Clone-simle</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <body>
+
+        <main id="app">
+            <section class="box" id="box">
+
+                <!-- Left -->
+                <div class="left" id="left">
+
+                    <div class="card" id="card">
+                        <img id="img" class="img" src="./choker.png" alt="Post Image" />
+                    </div>
+
+                    <div class="actions" id="actions">
+
+                        <div class="group" id="likeBox">
+                            <button id="likeBtn" class="btn">Like</button>
+                            <span id="likeNum" class="num">0</span>
+                        </div>
+
+                        <div class="group" id="shareBox">
+                            <button id="shareBtn" class="btn">Share</button>
+                            <span id="shareNum" class="num">0</span>
+                        </div>
+
+                    </div>
+
+                    <div class="inputBox" id="inputBox">
+                        <form action="">
+                            <input type="text" id="input" class="input" placeholder="Comment..." />
+                            <button type="submit">add</button>
+                            <input type="text" id="input" class="input" placeholder="Comment..." />
+                        <button id="addBtn" class="btn">Add</button>
+                        </form>
+                    </div>
+
+                </div>
+
+                <!-- Right -->
+                <div class="right" id="right">
+
+                    <div id="comments" class="comments">
+
+                        <h2 id="title" class="title">Comments</h2>
+
+                        <div id="list" class="list">
+
+                            <!-- Example -->
+
+                            <div class="item" data-id="1">
+                                <p class="text">Nice post!</p>
+
+                                <div class="btns">
+                                    <button class="cLike">Like</button>
+                                    <button class="cDel">Delete</button>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <button id="delAll" class="delAll">
+                            Delete All
+                        </button>
+
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <script src="./script.js"></script>
+
+    </body>
+</body>
+
+</html>
