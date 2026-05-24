@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessible Portfolio</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header>
+        <h1 role="heading">Sayan Adhikary</h1>
+        <nav role="navigation" aria-label="Main navigation">
+            <ul role="list" class="nav-list">
+                <li role="listitem"><a href="#about">About</a></li>
+                <li role="listitem"><a href="#skills">Skills</a></li>
+                <li role="listitem"><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <img role="img" src="./photo.jpg" alt="Profile picture of Sayan Adhikari's wife" class="profile-image">
+            <p>
+                I am a Computer Science student focused on problem solving, web development,
+                and building practical projects with clean and accessible user interfaces.
+            </p>
+        </section>
+
+        <section id="skills">
+            <h2>Core Skills</h2>
+            <ul role="list" class="skills-list">
+                <li role="listitem">Data Structures and Algorithms</li>
+                <li role="listitem">Java Programming</li>
+                <li role="listitem">Frontend Web Development</li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Email: sayan@example.com</p>
+        </section>
+    </main>
+    <script src="./script.js"></script>
+</body>
+
+</html>
