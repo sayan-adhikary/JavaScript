@@ -13,29 +13,32 @@ body {
 
 #app {
     max-width: 1200px;
-    margin: auto;
+    margin: 0 auto;
 }
 
-.box {
+.container {
     display: flex;
     gap: 24px;
     align-items: flex-start;
 }
 
-.left,
-.right {
+.left-panel,
+.right-panel {
     background: #fff;
     border-radius: 16px;
     padding: 20px;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
 }
 
-.left,
-.right {
+.left-panel {
     flex: 1;
 }
 
-.card {
+.right-panel {
+    flex: 1;
+}
+
+.post-card {
     width: 100%;
     border-radius: 14px;
     overflow: hidden;
@@ -43,14 +46,14 @@ body {
     background: #eaeaea;
 }
 
-.img {
+.post-image {
     width: 100%;
-    /* height: 100%; */
+    height: 320px;
     object-fit: cover;
     display: block;
 }
 
-.actions {
+.post-actions {
     display: flex;
     gap: 16px;
     align-items: center;
@@ -58,22 +61,24 @@ body {
     flex-wrap: wrap;
 }
 
-.group {
+.action-group {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.btn,
-.delAll,
-.cLike,
-.cDel {
+.action-btn,
+.add-btn,
+.comment-like-btn,
+.comment-delete-btn,
+.delete-all-btn {
     border: none;
     cursor: pointer;
-    transition: 0.2s;
+    transition: 0.2s ease;
 }
 
-. {
+.action-btn,
+.add-btn {
     padding: 10px 18px;
     border-radius: 10px;
     background: #222;
@@ -81,31 +86,32 @@ body {
     font-weight: 600;
 }
 
-.btn:hover,
-.delAll:hover,
-.cLike:hover,
-.cDel:hover {
+.action-btn:hover,
+.add-btn:hover,
+.comment-like-btn:hover,
+.comment-delete-btn:hover,
+.delete-all-btn:hover {
     opacity: 0.85;
     transform: translateY(-1px);
 }
 
-.num {
+.count {
     min-width: 32px;
     padding: 6px 10px;
     border-radius: 8px;
     background: #f0f0f0;
-    font-weight: bold;
+    font-weight: 700;
     text-align: center;
 }
 
-.inputBox {
+.comment-input-area {
     display: flex;
     gap: 12px;
     align-items: center;
     margin-top: 10px;
 }
 
-.input {
+.comment-input {
     flex: 1;
     padding: 12px 14px;
     border: 1px solid #ccc;
@@ -114,66 +120,66 @@ body {
     font-size: 14px;
 }
 
-.input:focus {
+.comment-input:focus {
     border-color: #666;
 }
 
-.comments {
+.comments-section {
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
 
-.title {
+.section-title {
     font-size: 22px;
     margin-bottom: 6px;
 }
 
-.list {
+.comments-list {
     display: flex;
     flex-direction: column;
     gap: 14px;
     min-height: 100px;
 }
 
-.item {
+.comment-item {
     background: #fafafa;
     border: 1px solid #e5e5e5;
     border-radius: 12px;
     padding: 14px;
 }
 
-.text {
+.comment-text {
     font-size: 15px;
     margin-bottom: 12px;
     line-height: 1.5;
 }
 
-.btns {
+.comment-buttons {
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
 }
 
-.cLike,
-.cDel,
-.delAll {
+.comment-like-btn,
+.comment-delete-btn,
+.delete-all-btn {
     padding: 8px 14px;
     border-radius: 8px;
     font-weight: 600;
 }
 
-.cLike {
+.comment-like-btn {
     background: #1e90ff;
     color: #fff;
 }
 
-.cDel {
+.comment-delete-btn {
     background: #ff4d4d;
     color: #fff;
 }
 
-.delAll {
+.delete-all-btn {
     background: #111;
     color: #fff;
     width: 100%;
@@ -182,11 +188,11 @@ body {
 }
 
 @media (max-width: 900px) {
-    .box {
+    .container {
         flex-direction: column;
     }
 
-    .img {
+    .post-image {
         height: 260px;
     }
 }

@@ -2,86 +2,67 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Facebook-Clone-simle</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Post with Comments</title>
     <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
+    <main id="app">
+        <section class="container" id="postContainer">
 
-    <body>
-
-        <main id="app">
-            <section class="box" id="box">
-
-                <!-- Left -->
-                <div class="left" id="left">
-
-                    <div class="card" id="card">
-                        <img id="img" class="img" src="./choker.png" alt="Post Image" />
-                    </div>
-
-                    <div class="actions" id="actions">
-
-                        <div class="group" id="likeBox">
-                            <button id="likeBtn" class="btn">Like</button>
-                            <span id="likeNum" class="num">0</span>
-                        </div>
-
-                        <div class="group" id="shareBox">
-                            <button id="shareBtn" class="btn">Share</button>
-                            <span id="shareNum" class="num">0</span>
-                        </div>
-
-                    </div>
-
-                    <div class="inputBox" id="inputBox">
-                        <form action="">
-                            <input type="text" id="input" class="input" placeholder="Comment..." />
-                            <button type="submit">add</button>
-                            <input type="text" id="input" class="input" placeholder="Comment..." />
-                        <button id="addBtn" class="btn">Add</button>
-                        </form>
-                    </div>
-
+            <!-- Left Side -->
+            <div class="left-panel" id="leftPanel">
+                <div class="post-card" id="postCard">
+                    <img id="postImage" class="post-image" src="./choker.png" alt="Post Image" />
                 </div>
 
-                <!-- Right -->
-                <div class="right" id="right">
+                <div class="post-actions" id="postActions">
+                    <div class="action-group like-group" id="likeGroup">
+                        <button type="button" id="likeBtn" class="action-btn like-btn">Like</button>
+                        <span id="likeCount" class="count">0</span>
+                    </div>
 
-                    <div id="comments" class="comments">
-
-                        <h2 id="title" class="title">Comments</h2>
-
-                        <div id="list" class="list">
-
-                            <!-- Example -->
-
-                            <div class="item" data-id="1">
-                                <p class="text">Nice post!</p>
-
-                                <div class="btns">
-                                    <button class="cLike">Like</button>
-                                    <button class="cDel">Delete</button>
-                                </div>
-                            </div>
-
-
-                        </div>
-
-                        <button id="delAll" class="delAll">
-                            Delete All
-                        </button>
-
+                    <div class="action-group share-group" id="shareGroup">
+                        <button type="button" id="shareBtn" class="action-btn share-btn">Share</button>
+                        <span id="shareCount" class="count">0</span>
                     </div>
                 </div>
-            </section>
-        </main>
 
-        <script src="./script.js"></script>
+                <div class="comment-input-area" id="commentInputArea">
+                    <input type="text" id="commentInput" class="comment-input" placeholder="Comment here..." />
+                    <button type="button" id="addCommentBtn" class="add-btn">Add</button>
+                </div>
+            </div>
 
-    </body>
+            <!-- Right Side -->
+            <div class="right-panel" id="rightPanel">
+                <div id="commentsSection" class="comments-section">
+                    <h2 id="commentsTitle" class="section-title">Comments</h2>
+
+                    <div id="commentsList" class="comments-list" tabindex="0">
+                        <!-- Single comment structure -->
+                        <!--
+            <div class="comment-item" data-comment-id="1">
+              <p class="comment-text">This is a comment.</p>
+              <div class="comment-buttons">
+                <button type="button" class="comment-like-btn">Like</button>
+                <button type="button" class="comment-delete-btn">Delete</button>
+              </div>
+            </div>
+            -->
+                    </div>
+                    
+                    <button type="button" id="deleteAllBtn" class="delete-all-btn">
+                        Delete All
+                    </button>
+                </div>
+            </div>
+
+        </section>
+    </main>
+    <script src="./script.js"></script>
 </body>
 
 </html>
