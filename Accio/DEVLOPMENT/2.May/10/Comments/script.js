@@ -7,32 +7,32 @@ let arr = [];
 
 let prop = document.querySelector('#image-div');
 
-prop.addEventListener('click', (e)=>{
+prop.addEventListener('click', (e) => {
     let ele = e.target;
     console.log("cliked", ele);
-    if(ele.tagName == 'BUTTON'){
+    if (ele.tagName == 'BUTTON') {
         let type = ele.id;
         // console.log("cliked in button type", type);
-        if(type == "like"){
+        if (type == "like") {
             // console.log("cliked like");
             likes++;
             // console.log(ele.parentElement.children[1].textContent, likes);
             ele.parentElement.children[1].textContent = likes;
         }
-        else if(type == "dislike"){
+        else if (type == "dislike") {
             dislikes++;
             ele.parentElement.children[1].textContent = dislikes;
         }
-        else if(type == "share"){
+        else if (type == "share") {
             share++;
             ele.parentElement.children[1].textContent = share;
         }
-        else if(type == "add-comment"){
+        else if (type == "add-comment") {
             console.log("Comment btn");
             let input = document.querySelector('input');
             let msg = input.value;
 
-            if(msg==""){
+            if (msg == "") {
                 return;
             }
 
@@ -65,17 +65,17 @@ prop.addEventListener('click', (e)=>{
             newDiv.appendChild(likeBtn);
             newDiv.appendChild(span);
             newDiv.appendChild(delBtn);
-            
+
             console.log("Heelo");
             console.log(newDiv);
 
             let comments = document.getElementById('comments');
             comments.appendChild(newDiv);
-            
+
             let obj = {
-                id : commentId,
-                text : msg,
-                like : 0,
+                id: commentId,
+                text: msg,
+                like: 0,
             }
 
             arr.push(obj);
@@ -85,15 +85,15 @@ prop.addEventListener('click', (e)=>{
 })
 
 let comments = document.querySelector('#comments');
-comments.addEventListener('click', (e)=>{
+comments.addEventListener('click', (e) => {
     let ele = e.target;
-    if(ele.tagName == "BUTTON"){
-        if(ele.matches('.like')){
+    if (ele.tagName == "BUTTON") {
+        if (ele.matches('.like')) {
             let par = ele.parentElement;
             let parId = Number(par.id);
 
-            for(let x of arr){
-                if(x.id == parId){
+            for (let x of arr) {
+                if (x.id == parId) {
                     x.like++;
                     par.children[2].textContent = x.like;
                 }
@@ -104,16 +104,16 @@ comments.addEventListener('click', (e)=>{
             // insert comments on the basis of arr
 
         }
-        else if(ele.matches('.del-comment')){
+        else if (ele.matches('.del-comment')) {
             let par = ele.parentElement;
-            for(let i=0; i<arr.length; i++){
-                if(arr[i].id == Number(par.id)){
-                    arr.splice(i,1);
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i].id == Number(par.id)) {
+                    arr.splice(i, 1);
                     break;
                 }
             }
             par.remove();
             console.log(arr);
         }
-    }    
+    }
 })
