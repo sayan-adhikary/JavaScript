@@ -1,5 +1,6 @@
 class BankAccount {
     static totalAccounts = 0;
+    static arr = [];
     constructor(accountHolder, accountNumber, balance) {
         BankAccount.totalAccounts++;
         this.accountHolder = accountHolder;
@@ -17,6 +18,7 @@ class BankAccount {
             return;
         }
         this.balance += Number(amount);
+        arr.push(`${amount} diposite`);
     }
 
     withdraw(amount) {
@@ -30,6 +32,7 @@ class BankAccount {
             return;
         }
         this.balance -= amount;
+        arr.push(`${amount} withdrawl`)
     }
 
     showBalance() {
@@ -67,17 +70,32 @@ class UPIAccount extends BankAccount {
         receiverAccount.balance += amount;
         console.log("Transaction Successfull");
     }
+
+    withdraw(amount) {
+        if (isNaN(amount) || amount < 0) {
+            console.log("Invalid amount");
+            return;
+        }
+        amount = Number(amount);
+        if (this.balance < amount) {
+            console.log("Insufficient Balance");
+            return;
+        }
+        this.balance -= amount;
+    }
 }
 
 let Ram = new UPIAccount("Ram", 1, 1000, "ram@ptsbi");
 let Shyam = new UPIAccount("Shyam,", 2, 500, "shyam@ptsbi");
-console.log(Ram);
-console.log(Shyam);
+// console.log(Ram);
+// console.log(Shyam);
 
-Ram.payViaUPI(2000, Shyam);
-console.log(Ram);
-console.log(Shyam);
+// Ram.payViaUPI(2000, Shyam);
+// console.log(Ram);
+// console.log(Shyam);
 
-Ram.payViaUPI(200, Shyam);
-console.log(Ram.balance);
-console.log(Shyam.balance);
+// Ram.payViaUPI(200, Shyam);
+// console.log(Ram.balance);
+// console.log(Shyam.showBalance());
+Shyam.withdraw(300);
+console.log(Shyam);
