@@ -1,3 +1,5 @@
+// example 1
+
 function hello() {
     let name = "Ramesh";
     setTimeout(() => {
@@ -7,7 +9,7 @@ function hello() {
 
 hello();
 
-
+// example 2
 
 function outter() {
     let cnt = 0;
@@ -21,9 +23,7 @@ function outter() {
 
 outter();
 
-
-
-
+// example 3
 
 let x = 10;
 function greet() {
@@ -36,7 +36,7 @@ greet();
 x = 20;
 greet();
 
-
+// example 4
 
 function outter() {
     let x = 10;
@@ -54,11 +54,7 @@ y();
 y();
 y();
 
-
-
-
-
-
+// example 5
 
 function outer() {
     let count = 1;
@@ -68,19 +64,18 @@ function outer() {
     };
 }
 
-const x = outer();
-const y = outer();
+const x = outer();  //created in different memo
+const y = outer();  //created in different memo
 
 console.log(x);
 console.log(y);
 
 x();
-x();
 y();
 x();
+y();
 
-
-
+// example 6
 
 // Applications of Closures
 
@@ -99,11 +94,7 @@ console.log(two);
 two(5);
 three(5);
 
-
-
-
-
-
+// example 6
 
 let name = "Global";
 
@@ -119,9 +110,7 @@ const fn = outer();
 
 fn();
 
-
-
-
+// example 7
 
 let a = 10;
 {
@@ -134,10 +123,7 @@ let a = 10;
 }
 console.log("3", a);
 
-
-
-
-
+// example 8
 
 let x = 10;
 
@@ -153,12 +139,3 @@ x = 50;
 
 fn();
 console.log("x", x);
-
-
-
-// What is Closures
-// Lexical Scope
-// Lexical Environment
-// Applications of Closures
-// 1. Throttling
-// 2. Debouncing
