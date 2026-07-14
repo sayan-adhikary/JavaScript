@@ -1,55 +1,55 @@
-function greet(name){
+function greet(name) {
     // heavy work => fetch calls which will increase the cost
     console.log("Work Done", name);
 }
 
 
-function throttle(fn, delay){
+function throttle(fn, delay) {
     let timer = 0;
 
-    return function(...arg) {
+    return function (...arg) {
         let curr = Date.now();
         // console.log("curr", curr);
         // console.log("timer", timer);
         // console.log("diff", curr - timer);
-        if(curr - timer >= delay){
+        if (curr - timer >= delay) {
             fn(...arg);
             timer = curr;
         }
     }
 }
 
-const throttleGreet =  throttle(greet, 500);
+const throttleGreet = throttle(greet, 500);
 
 throttleGreet(1);
-setTimeout(()=>{
+setTimeout(() => {
     throttleGreet(2);
 }, 100);
-setTimeout(()=>{
+setTimeout(() => {
     throttleGreet(3);
 }, 200);
-setTimeout(()=>{
+setTimeout(() => {
     throttleGreet(4);
 }, 300);
-setTimeout(()=>{
+setTimeout(() => {
     throttleGreet(5);
 }, 400);
-setTimeout(()=>{
+setTimeout(() => {
     throttleGreet(6);
 }, 500);
-setTimeout(()=>{
+setTimeout(() => {
     throttleGreet(7);
 }, 600);
-setTimeout(()=>{
+setTimeout(() => {
     throttleGreet(8);
 }, 700);
-setTimeout(()=>{
+setTimeout(() => {
     throttleGreet(9);
 }, 800);
-setTimeout(()=>{
+setTimeout(() => {
     throttleGreet(10);
 }, 900);
-setTimeout(()=>{
+setTimeout(() => {
     throttleGreet(11);
 }, 1000);
 
@@ -57,7 +57,7 @@ setTimeout(()=>{
 
 let btn = document.querySelector('button');
 
-btn.addEventListener(('click'), ()=>{
+btn.addEventListener(('click'), () => {
     // greet();
     throttleGreet();
 })

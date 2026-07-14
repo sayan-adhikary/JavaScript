@@ -1,7 +1,7 @@
-function hello(){
+function hello() {
     let name = "Ramesh";
-    setTimeout(()=>{
-        console.log("Hello",name);
+    setTimeout(() => {
+        console.log("Hello", name);
     }, 1000);
 }
 
@@ -9,10 +9,10 @@ hello();
 
 
 
-function outter(){
+function outter() {
     let cnt = 0;
 
-    function inner(){
+    function inner() {
         cnt++;
         console.log("cnt", cnt);
     }
@@ -26,7 +26,7 @@ outter();
 
 
 let x = 10;
-function greet(){
+function greet() {
     x++;
     console.log("x", x);
 }
@@ -38,10 +38,10 @@ greet();
 
 
 
-function outter(){
+function outter() {
     let x = 10;
 
-    return function inner(){
+    return function inner() {
         x++;
         console.log("x", x);
     }
@@ -86,9 +86,9 @@ x();
 
 //1. Currying
 
-function multiplier(x){
-    return function(a){
-        console.log(a*x);
+function multiplier(x) {
+    return function (a) {
+        console.log(a * x);
     }
 }
 
@@ -126,7 +126,7 @@ fn();
 let a = 10;
 {
     let a = 20;
-    if(true){
+    if (true) {
         let a = 30;
         console.log("1", a);
     }
