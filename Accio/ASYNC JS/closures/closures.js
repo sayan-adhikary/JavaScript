@@ -133,7 +133,8 @@ function outer(x) {
     };
 }
 
-const fn = outer(90);
+const fn = outer(90);   //function
+console.log(fn);
 
 x = 50;
 
