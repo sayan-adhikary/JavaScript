@@ -1,27 +1,23 @@
-import { useState } from 'react'
+import { useState } from "react";
 
 // import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
-  function red(){
+  function red() {}
 
-  }
+  function green() {}
 
-  function green(){
-
-  }
-
-  function yellow(){
-    
-  }
+  function yellow() {}
 
   return (
     <>
-      <button onClick={red}>Red </button><button onClick={green}>green</button><button onClick={yellow}>yellow</button>
+      <button onClick={red}>Red </button>
+      <button onClick={green}>green</button>
+      <button onClick={yellow}>yellow</button>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
