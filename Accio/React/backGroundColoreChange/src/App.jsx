@@ -1,22 +1,26 @@
 import { useState } from "react";
 
-// import './App.css'
-
 function App() {
-  const [count, setCount] = useState(0);
+  const [bgColor, setBgColor] = useState("white");
 
-  function red() {}
+  function red() {
+    setBgColor("red");
+  }
 
-  function green() {}
+  function green() {
+    setBgColor("green");
+  }
 
-  function yellow() {}
+  function yellow() {
+    setBgColor("yellow");
+  }
 
   return (
-    <>
+    <div style={{ backgroundColor: bgColor, minHeight: "100vh", display: "flex", gap: "10px", alignItems: "center", justifyContent: "center" }}>
       <button onClick={red}>Red </button>
       <button onClick={green}>green</button>
       <button onClick={yellow}>yellow</button>
-    </>
+    </div>
   );
 }
 
