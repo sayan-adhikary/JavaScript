@@ -1,31 +1,39 @@
-import { useState } from 'react'
-
-// import './App.css'
+import { useState } from "react";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
+  const [input, setInput] = useState("");
 
-  function incrising() {
+  function set() {
+    setCount(Number(input));
+  }
+
+  function increasing() {
     setCount(count + 1);
   }
 
-  function dicrising() {
-    setCount(count - 1000000);
+  function decreasing() {
+    setCount(count - 1);
   }
 
-  function reset(){
-    setCount(0)
+  function reset() {
+    setCount(input);
   }
 
   return (
     <>
       <h1>{count}</h1>
-      <input type="text" />
-      <button onClick={incrising}>inc</button>
-      <button onClick={dicrising}>dic</button>
-      <button onClick={reset}>reset</button>
+      <input
+        type="number"
+        value={input}
+        onChange={(e) => setInput(e.target.value)}
+      />
+      <button onClick={set}>Set</button>
+      <button onClick={increasing}>Increment</button>
+      <button onClick={decreasing}>Decrement</button>
+      <button onClick={reset}>Reset</button>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
