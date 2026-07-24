@@ -42,13 +42,7 @@ function App() {
         <p>Search a GitHub username to view their public profile details.</p>
 
         <form onSubmit={getData} className="search-form">
-          <input
-            type="text"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-            placeholder="Enter GitHub username"
-            aria-label="GitHub username"
-          />
+          <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} placeholder="Enter GitHub username" aria-label="GitHub username" />
           <button type="submit" disabled={loading}>
             {loading ? 'Loading...' : 'Search'}
           </button>
