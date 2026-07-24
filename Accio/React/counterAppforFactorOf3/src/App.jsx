@@ -1,5 +1,4 @@
 import { useState } from "react";
-// import './App.css'
 
 function App() {
   const [count, setCount] = useState(0);
@@ -28,13 +27,7 @@ function App() {
 
   // Check Factor of 3
   const handleFactorOf3 = () => {
-    if (count === 0) {
-      alert("0 is divisible by 3.");
-    } else if (count % 3 === 0) {
-      alert(`${count} is a factor/multiple of 3.`);
-    } else {
-      alert(`${count} is NOT a factor/multiple of 3.`);
-    }
+    setCount((prev) => prev * 3);
   };
 
   return (
