@@ -4,13 +4,13 @@ import Card from "./Card.jsx";
 function App() {
   const [count, setCount] = useState(0);
 
-  const [name2, setname] = useState("");
+  const [name, setName] = useState("");
 
   const isLoggedIn = true;
-  const obj = {};
+  const address = { city: "Pune" };
 
-  let error = 0;
-  if (error) {
+  const hasError = false;
+  if (hasError) {
     return (
       <>
         <h1>502 Error</h1>
@@ -27,28 +27,25 @@ function App() {
 
   function printOnConsole(e) {
     console.log("Printing", e.target);
-    setCount(count + 1);
+    setCount((previousCount) => previousCount + 1);
   }
 
-  let name = "";
-
   function handleInput(e) {
-    name = e.target.value;
-    setname(e.target.value);
+    setName(e.target.value);
   }
 
   return (
     <div>
-      <h1>{name}</h1>
+      <h1>Typed text: {name}</h1>
+      <h2>Button clicks: {count}</h2>
+
       <button
-        onClick={(e) => {
-          handleClick("Azmat", e);
-        }}
+        onClick={(e) => handleClick("Azmat", e)}
       >
         Click Me to print
       </button>
 
-      <input type="text" onChange={handleInput} />
+      <input type="text" value={name} onChange={handleInput} />
 
       <button
         onClick={(e) => {
@@ -77,14 +74,13 @@ function App() {
 
       <h1>Learning React Rendering</h1>
       {isLoggedIn ? (
-        <Card name="Azmat" age={22} add={45} />
+        <Card name="Azmat" age={22} address={address} />
       ) : (
         <button>Login/SignUP</button>
       )}
-      {obj && (
+      {name.length > 0 && (
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae,
-          ea!
+          You typed: {name}
         </p>
       )}
 
