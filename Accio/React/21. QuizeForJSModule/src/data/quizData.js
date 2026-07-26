@@ -1,0 +1,86 @@
+// questions.js
+
+const questions = [
+    {
+        id: 1,
+        question: "Which keyword is used to declare a constant in JavaScript?",
+        imgtag: "https://picsum.photos/seed/javascript1/600/400",
+        options: ["let", "var", "const", "static"],
+        ans: "const",
+        time: 30,
+    },
+    {
+        id: 2,
+        question: "Which company developed JavaScript?",
+        imgtag: "https://picsum.photos/seed/javascript2/600/400",
+        options: ["Google", "Microsoft", "Netscape", "Apple"],
+        ans: "Netscape",
+        time: 30,
+    },
+    {
+        id: 3,
+        question: "Which method is used to print output in the browser console?",
+        imgtag: "https://picsum.photos/seed/javascript3/600/400",
+        options: ["console.log()", "print()", "echo()", "document.write()"],
+        ans: "console.log()",
+        time: 30,
+    },
+    {
+        id: 4,
+        question: "Which symbol is used for strict equality comparison?",
+        imgtag: "https://picsum.photos/seed/javascript4/600/400",
+        options: ["==", "=", "===", "!="],
+        ans: "===",
+        time: 30,
+    },
+    {
+        id: 5,
+        question: "Which of the following is NOT a JavaScript data type?",
+        imgtag: "https://picsum.photos/seed/javascript5/600/400",
+        options: ["String", "Boolean", "Float", "Undefined"],
+        ans: "Float",
+        time: 30,
+    },
+    {
+        id: 6,
+        question: "Which array method adds an element to the end of an array?",
+        imgtag: "https://picsum.photos/seed/javascript6/600/400",
+        options: ["push()", "pop()", "shift()", "unshift()"],
+        ans: "push()",
+        time: 30,
+    },
+    {
+        id: 7,
+        question: "Which keyword is used to define a function in JavaScript?",
+        imgtag: "https://picsum.photos/seed/javascript7/600/400",
+        options: ["func", "function", "define", "method"],
+        ans: "function",
+        time: 30,
+    },
+    {
+        id: 8,
+        question: "Which loop executes at least once?",
+        imgtag: "https://picsum.photos/seed/javascript8/600/400",
+        options: ["for", "while", "do...while", "forEach"],
+        ans: "do...while",
+        time: 30,
+    },
+    {
+        id: 9,
+        question: "Which method converts a JSON string into a JavaScript object?",
+        imgtag: "https://picsum.photos/seed/javascript9/600/400",
+        options: ["JSON.stringify()", "JSON.parse()", "JSON.convert()", "JSON.object()"],
+        ans: "JSON.parse()",
+        time: 30,
+    },
+    {
+        id: 10,
+        question: "Which operator is used with async functions to wait for a Promise?",
+        imgtag: "https://picsum.photos/seed/javascript10/600/400",
+        options: ["wait", "await", "promise", "yield"],
+        ans: "await",
+        time: 30,
+    },
+];
+
+export default questions;
