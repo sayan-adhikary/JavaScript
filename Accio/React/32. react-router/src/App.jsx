@@ -30,8 +30,8 @@ function App() {
         <Route path={"/login"} element={<Login />}></Route>
         {/* Prefer this route at the end */}
         {/* What will happen if not the end */}
-        {/* <Route path={"/*"} element={<ResourceNotFound/>}></Route> */}
-        <Route path={"/*"} element={<Navigate to="/" />}></Route>
+        <Route path={"/*"} element={<ResourceNotFound/>}></Route>
+        {/* <Route path={"/*"} element={<Navigate to="/" />}></Route> */}
       </Routes>
 
 
