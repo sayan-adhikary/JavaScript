@@ -1,16 +1,58 @@
-# React + Vite
+# Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive dashboard built with React for displaying key metrics, activity, and recent updates in a clean and modern interface.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Overview cards for total users, sales, revenue, and growth
+- Responsive layout for desktop and mobile screens
+- Recent transactions and activity panels
+- Clean UI with modern styling
+- Easy to extend with more widgets and charts
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- JavaScript
+- CSS
 
-## Expanding the ESLint configuration
+## Project Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+src/
+├── components/
+│   ├── Sidebar.jsx
+│   ├── Navbar.jsx
+│   ├── StatCard.jsx
+│   └── RecentActivity.jsx
+├── pages/
+│   └── Dashboard.jsx
+├── App.jsx
+├── main.jsx
+├── index.css
+└── data/
+    └── dashboardData.js
+```
+
+## Getting Started
+
+1. Install dependencies:
+
+   ```bash
+   npm i
+   ```
+
+2. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+`
+
+## Notes
+
+This project is a starter dashboard template and can be customized to match your business or portfolio needs.
+
+## License
+
+This project is open-source and available under the MIT License.
