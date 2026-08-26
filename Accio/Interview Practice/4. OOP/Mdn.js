@@ -1,4 +1,6 @@
-/*
+/* MDN Doc:- 
+link :- https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Test_your_skills/Object-oriented_JavaScript
+
 In this task we provide you with the start of a definition for a Shape class. 
 It has three properties: name, sides, and sideLength. This class only models shapes for which all sides are the same length, 
 like a square or an equilateral triangle.
@@ -15,22 +17,22 @@ Call triangle.calcPerimeter() to check that it works OK.
 */
 
 class Shape {
-    name;
-    sides;
-    sideLength;
+  name;
+  sides;
+  sideLength;
 
-    //constructor
-    constructor(name, sides, sideLength) {
-        this.name = name;
-        this.sides = sides;
-        this.sideLength = sideLength;
-    }
+  //constructor
+  constructor(name, sides, sideLength) {
+    this.name = name;
+    this.sides = sides;
+    this.sideLength = sideLength;
+  }
 
-    //methods
-    calcPerimeter() {
-        let cal = this.sides * this.sideLength;
-        console.log(cal);
-    }
+  //methods
+  calcPerimeter() {
+    let cal = this.sides * this.sideLength;
+    console.log(cal);
+  }
 }
 
 // let square = new Shape("square", 4, 5);
@@ -38,7 +40,6 @@ class Shape {
 
 // let triangle = new Shape("triangle", 3, 3);
 // triangle.calcPerimeter();
-
 
 /*
 Now it's time to add some inheritance into the mix.
@@ -54,16 +55,15 @@ Create an instance of the Square class called square with appropriate property v
  */
 
 class Square extends Shape {
+  constructor(sideLength) {
+    super('Square', 4, sideLength);
+  }
 
-    constructor(sideLength) {
-        super("Square", 4, sideLength);
-    }
-
-    //new Method
-    calcArea() {
-        let area = this.sides * this.sideLength;
-        console.log(area);
-    }
+  //new Method
+  calcArea() {
+    let area = this.sides * this.sideLength;
+    console.log(area);
+  }
 }
 
 let a = new Square(23);
