@@ -1,8 +1,7 @@
-import { useState } from "react";
-import "./App.css";
+import { useState } from 'react';
 
 function App() {
-  const [password, setPassword] = useState("");
+  const [password, setPassword] = useState('');
   const [length, setLength] = useState(6);
 
   const [uppercase, setUppercase] = useState(false);
@@ -11,31 +10,31 @@ function App() {
   const [symbols, setSymbols] = useState(false);
 
   const generatePassword = () => {
-    let characters = "";
+    let characters = '';
 
     if (uppercase) {
-      characters += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+      characters += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
     }
 
     if (lowercase) {
-      characters += "abcdefghijklmnopqrstuvwxyz";
+      characters += 'abcdefghijklmnopqrstuvwxyz';
     }
 
     if (numbers) {
-      characters += "0123456789";
+      characters += '0123456789';
     }
 
     if (symbols) {
-      characters += "!@#$%^&*()_+-=[]{}|;:,.<>?";
+      characters += '!@#$%^&*()_+-=[]{}|;:,.<>?';
     }
 
     // If no option is selected
-    if (characters === "") {
-      alert("Please select at least one character type.");
+    if (characters === '') {
+      alert('Please select at least one character type.');
       return;
     }
 
-    let newPassword = "";
+    let newPassword = '';
 
     for (let i = 0; i < length; i++) {
       const randomIndex = Math.floor(Math.random() * characters.length);
@@ -62,7 +61,7 @@ function App() {
             if (!password) return;
 
             navigator.clipboard.writeText(password);
-            alert("Password copied!");
+            alert('Password copied!');
           }}
         >
           Copy
@@ -124,14 +123,18 @@ function App() {
       {/* Buttons */}
       <div className="buttons">
         <button onClick={generatePassword}>Generate Password</button>
-        <button  onClick={() => {
-    setPassword("");
-    setLength(12);
-    setUppercase(true);
-    setLowercase(true);
-    setNumbers(true);
-    setSymbols(false);
-  }}>Reset</button>
+        <button
+          onClick={() => {
+            setPassword('');
+            setLength(12);
+            setUppercase(true);
+            setLowercase(true);
+            setNumbers(true);
+            setSymbols(false);
+          }}
+        >
+          Reset
+        </button>
       </div>
     </div>
   );
