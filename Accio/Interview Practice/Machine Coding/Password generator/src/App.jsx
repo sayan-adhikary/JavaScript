@@ -1,13 +1,13 @@
 import { useState } from 'react';
-import { generatePassword } from './utils/passwordGenerator.js';
+import { generatePassword } from './utils/passwordGenerator';
 
 function App() {
   const [password, setPassword] = useState('');
-  const [length, setLength] = useState(6);
+  const [length, setLength] = useState(12);
 
-  const [uppercase, setUppercase] = useState(false);
-  const [lowercase, setLowercase] = useState(false);
-  const [numbers, setNumbers] = useState(false);
+  const [uppercase, setUppercase] = useState(true);
+  const [lowercase, setLowercase] = useState(true);
+  const [numbers, setNumbers] = useState(true);
   const [symbols, setSymbols] = useState(false);
 
   const handleGeneratePassword = () => {
@@ -27,97 +27,125 @@ function App() {
     setPassword(newPassword);
   };
 
+  const handleReset = () => {
+    setPassword('');
+    setLength(12);
+    setUppercase(true);
+    setLowercase(true);
+    setNumbers(true);
+    setSymbols(false);
+  };
+
+  const handleCopy = () => {
+    if (!password) return;
+
+    navigator.clipboard.writeText(password);
+    alert('Password copied!');
+  };
+
   return (
-    <div className="container">
-      <h1>Password Generator</h1>
+    <div className="min-h-screen bg-gray-100 flex items-center justify-center p-5">
+      {' '}
+      <div className="w-full max-w-md rounded-xl bg-white p-8 shadow-lg">
+        <h1 className="mb-8 text-center text-3xl font-bold">
+          Password Generator
+        </h1>
 
-      {/* Password Display */}
-      <div className="password-box">
-        <input
-          type="text"
-          value={password}
-          placeholder="Generated Password"
-          readOnly
-        />
-        <button
-          onClick={() => {
-            if (!password) return;
-
-            navigator.clipboard.writeText(password);
-            alert('Password copied!');
-          }}
-        >
-          Copy
-        </button>
-      </div>
-
-      {/* Password Length */}
-      <div className="length-section">
-        <label>Password Length: {length}</label>
-
-        <input
-          type="range"
-          min="6"
-          max="30"
-          value={length}
-          onChange={(e) => setLength(Number(e.target.value))}
-        />
-      </div>
-
-      {/* Options */}
-      <div className="options">
-        <label>
+        {/* Password Display */}
+        <div className="mb-6 flex gap-2">
           <input
-            type="checkbox"
-            checked={uppercase}
-            onChange={() => setUppercase(!uppercase)}
+            type="text"
+            value={password}
+            placeholder="Generated Password"
+            readOnly
+            className="w-full rounded-md border border-gray-300 px-3 py-3 outline-none focus:border-blue-500"
           />
-          Uppercase
-        </label>
 
-        <label>
+          <button
+            onClick={handleCopy}
+            className="rounded-md bg-gray-800 px-4 py-2 text-white transition hover:bg-gray-700 active:scale-95"
+          >
+            Copy
+          </button>
+        </div>
+
+        {/* Password Length */}
+        <div className="mb-6">
+          <div className="mb-3 flex justify-between">
+            <label className="font-medium">Password Length</label>
+
+            <span className="font-bold text-blue-600">{length}</span>
+          </div>
+
           <input
-            type="checkbox"
-            checked={lowercase}
-            onChange={() => setLowercase(!lowercase)}
+            type="range"
+            min="4"
+            max="30"
+            value={length}
+            onChange={(e) => setLength(Number(e.target.value))}
+            className="w-full cursor-pointer"
           />
-          Lowercase
-        </label>
+        </div>
 
-        <label>
-          <input
-            type="checkbox"
-            checked={numbers}
-            onChange={() => setNumbers(!numbers)}
-          />
-          Numbers
-        </label>
+        {/* Options */}
+        <div className="mb-6 flex flex-col gap-4">
+          <label className="flex cursor-pointer items-center gap-3">
+            <input
+              type="checkbox"
+              checked={uppercase}
+              onChange={() => setUppercase(!uppercase)}
+              className="h-4 w-4"
+            />
+            Uppercase Letters
+          </label>
 
-        <label>
-          <input
-            type="checkbox"
-            checked={symbols}
-            onChange={() => setSymbols(!symbols)}
-          />
-          Symbols
-        </label>
-      </div>
+          <label className="flex cursor-pointer items-center gap-3">
+            <input
+              type="checkbox"
+              checked={lowercase}
+              onChange={() => setLowercase(!lowercase)}
+              className="h-4 w-4"
+            />
+            Lowercase Letters
+          </label>
 
-      {/* Buttons */}
-      <div className="buttons">
-        <button onClick={handleGeneratePassword}>Generate Password</button>
-        <button
-          onClick={() => {
-            setPassword('');
-            setLength(12);
-            setUppercase(true);
-            setLowercase(true);
-            setNumbers(true);
-            setSymbols(false);
-          }}
-        >
-          Reset
-        </button>
+          <label className="flex cursor-pointer items-center gap-3">
+            <input
+              type="checkbox"
+              checked={numbers}
+              onChange={() => setNumbers(!numbers)}
+              className="h-4 w-4"
+            />
+            Numbers
+          </label>
+
+          <label className="flex cursor-pointer items-center gap-3">
+            <input
+              type="checkbox"
+              checked={symbols}
+              onChange={() => setSymbols(!symbols)}
+              className="h-4 w-4"
+            />
+            Symbols
+          </label>
+        </div>
+
+        {/* Buttons */}
+        <div className="flex gap-3">
+          <button
+            onClick={handleGeneratePassword}
+            className="flex-1 rounded-md bg-blue-600 px-4 py-3 font-medium text-white transition hover:bg-blue-700 active:scale-95"
+          >
+            Generate Password
+          </button>
+
+          <button
+            onClick={handleReset}
+            className="rounded-md bg-gray-200 px-4 py-3 font-medium transition hover:bg-gray-300 active:scale-95"
+          >
+            Reset
+          </button>
+        </div>
       </div>
     </div>
   );
