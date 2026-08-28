@@ -1,13 +1,13 @@
 import Employee from '../models/employeeModel.js';
 
 const authenticate = async (req, res, next) => {
-  console.log('Inside Authenticate');
+  // console.log('Inside Authenticate');
   try {
     const { empId, password } = req.body;
 
     // check this employee in DB
     const employee = await Employee.findOne({ empId });
-    console.log('employee to verify', employee);
+    // console.log('employee to verify', employee);
 
     if (!employee) {
       console.log('Employee does not exist');
@@ -19,13 +19,13 @@ const authenticate = async (req, res, next) => {
     // employee exists
 
     // incorrect password
-    console.log(password == employee.password);
-    console.log('password', password);
+    // console.log(password == employee.password);
+    // console.log('password', password);
     // password
-    console.log('employee pwd', employee['password']);
-    console.log('employee name', employee['name']);
+    // console.log('employee pwd', employee['password']);
+    // console.log('employee name', employee['name']);
     if (password != employee.password) {
-      console.log('Incorrect Pwd');
+      // console.log('Incorrect Pwd');
       return res.status(401).json({
         message: 'Incorrect Password',
       });

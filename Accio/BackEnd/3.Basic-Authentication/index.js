@@ -1,6 +1,8 @@
 import express from 'express';
 import connectDB from './configs/db.js';
 import { authenticate } from './middlewares/verify.js';
+import employeeRoutes from './routes/employeeRoutes.js';
+
 const app = express();
 
 // connect db
@@ -16,7 +18,6 @@ app.get('/', (req, res) => {
   res.send('Hello World');
 });
 
-import employeeRoutes from './routes/employeeRoutes.js';
 app.use('/employee', employeeRoutes);
 
 const PORT = 3000;
