@@ -1,0 +1,14 @@
+body {
+    background-color: #101010;
+    color: #fff;
+}
+.box {
+    background-color: rgb(36, 74, 74);
+}
+
+.item {
+    background-color: purple;
+    height: 100px;
+    width: 100px;
+    margin: 10px;
+}
